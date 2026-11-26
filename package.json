@@ -1,0 +1,31 @@
+{
+  "name": "virages",
+  "private": true,
+  "scripts": {
+    "build": "pnpm card:build:lib && pnpm --filter evilspins-app build",
+    "dev": "pnpm card:build:lib && pnpm -r --parallel dev",
+
+    "box:dev": "pnpm --filter evilspins-app dev",
+    "box:devite": "pnpm --filter evilspins-app devite",
+    "box:build": "pnpm card:build:lib && pnpm --filter evilspins-app build",
+    "box:preview": "pnpm --filter evilspins-app preview",
+    "box:build:android": "pnpm card:build:lib && pnpm --filter evilspins-app build:android",
+    "box:install-apk": "pnpm --filter evilspins-app install-apk",
+    "box:launch": "pnpm --filter evilspins-app launch",
+    "box:logs": "pnpm --filter evilspins-app logs",
+    "box:uninstall": "pnpm --filter evilspins-app uninstall",
+    "box:rebuild": "pnpm card:build:lib && pnpm --filter evilspins-app rebuild",
+    "box:scrcpy": "pnpm --filter evilspins-app scrcpy",
+
+    "card:dev": "pnpm --filter card-tools dev",
+    "card:build": "pnpm --filter card-tools build",
+    "card:build:lib": "pnpm --filter card-tools build:lib",
+    "card:preview": "pnpm --filter card-tools preview",
+    "card:deploy": "pnpm --filter card-tools deploy",
+
+    "tokywoky:compile": "pnpm --filter tokywoky compile",
+    "tokywoky:upload": "pnpm --filter tokywoky upload",
+    "tokywoky:monitor": "pnpm --filter tokywoky monitor",
+    "tokywoky:send": "pnpm --filter tokywoky send"
+  }
+}
