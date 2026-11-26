@@ -1,17 +1,19 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
+import { viteSingleFile } from 'vite-plugin-singlefile'
 import path from 'path'
 
 export default defineConfig({
   base: process.env.BASE_URL || '/',
   plugins: [
     vue(),
+    viteSingleFile(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt'],
       manifest: {
-        name: 'App NFC Debug',
+        name: 'Box',
         short_name: 'App',
         description: 'NFC tag debugging, light sensor monitoring, and file storage testing',
         theme_color: '#0d1117',
