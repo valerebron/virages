@@ -1,11 +1,11 @@
-name: Deploy card-tools demo to GitHub Pages
+name: Deploy box app to GitHub Pages
 
 on:
   push:
     branches: [main]
     paths:
-      - 'card/**'
-      - '.github/workflows/card-pages.yml'
+      - 'box/**'
+      - '.github/workflows/box-pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -38,18 +38,18 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-        working-directory: ./card
+        working-directory: ./box
 
-      - name: Build demo app
+      - name: Build web app
         run: pnpm run build
-        working-directory: ./card
+        working-directory: ./box
         env:
-          BASE_URL: '/virages/card/'
+          BASE_URL: '/virages'
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./card/dist
+          path: ./box/www
 
   deploy:
     needs: build

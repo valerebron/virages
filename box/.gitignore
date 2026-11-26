@@ -1,1 +1,7 @@
 node_modules
+
+# Build artifacts
+www/assets/*.map
+www/sw.js.map
+www/sw.js
+www/workbox-*.js
