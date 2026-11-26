@@ -1,4 +1,4 @@
-package com.evilspins.app;
+package com.box.app;
 
 import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
@@ -10,12 +10,12 @@ import android.util.Log;
 import android.view.View;
 
 import com.getcapacitor.BridgeActivity;
-import com.evilspins.app.permissions.PermissionsPlugin;
-import com.evilspins.app.nfc.NfcPlugin;
-import com.evilspins.app.sensor.LightSensorPlugin;
-import com.evilspins.app.storage.FileStoragePlugin;
-import com.evilspins.app.kiosk.KioskDeviceAdminReceiver;
-import com.evilspins.app.kiosk.KioskPlugin;
+import com.box.app.permissions.PermissionsPlugin;
+import com.box.app.nfc.NfcPlugin;
+import com.box.app.sensor.LightSensorPlugin;
+import com.box.app.storage.FileStoragePlugin;
+import com.box.app.kiosk.KioskDeviceAdminReceiver;
+import com.box.app.kiosk.KioskPlugin;
 
 public class MainActivity extends BridgeActivity {
     private static final String TAG = "MainActivity";
@@ -70,7 +70,7 @@ public class MainActivity extends BridgeActivity {
             Log.d(TAG, "Lock task mode started");
         } else {
             Log.w(TAG, "Not device owner - lock task mode not available");
-            Log.w(TAG, "Run provisioning command: adb shell dpm set-device-owner com.evilspins.app/.kiosk.KioskDeviceAdminReceiver");
+            Log.w(TAG, "Run provisioning command: adb shell dpm set-device-owner com.box.app/.kiosk.KioskDeviceAdminReceiver");
         }
     }
 

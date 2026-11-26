@@ -40,7 +40,7 @@ sleep 1
 
 # 3. Force stop app
 log "Force stopping app..."
-adb shell am force-stop com.evilspins.app 2>/dev/null || true
+adb shell am force-stop com.box.app 2>/dev/null || true
 
 # 4. Update capacitor.config.json with live reload URL
 CAP_CONFIG="capacitor.config.json"
@@ -66,7 +66,7 @@ log "Copying capacitor.config.json to Android..."
 npx cap copy android 2>/dev/null || true
 log "Syncing & launching app..."
 npx cap sync android 2>/dev/null || true
-adb shell am start -n com.evilspins.app/.MainActivity
+adb shell am start -n com.box.app/.MainActivity
 
 # 8. Launch scrcpy
 log "Starting scrcpy..."

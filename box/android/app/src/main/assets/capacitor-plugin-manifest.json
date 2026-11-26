@@ -1,7 +1,7 @@
 {
   "plugins": {
     "AppPermissions": {
-      "className": "com.evilspins.app.permissions.PermissionsPlugin"
+      "className": "com.box.app.permissions.PermissionsPlugin"
     }
   }
 }

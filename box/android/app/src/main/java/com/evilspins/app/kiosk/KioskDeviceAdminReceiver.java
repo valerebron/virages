@@ -1,4 +1,4 @@
-package com.evilspins.app.kiosk;
+package com.box.app.kiosk;
 
 import android.app.admin.DeviceAdminReceiver;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.evilspins.app.nfc;
+package com.box.app.nfc;
 
 import android.app.Activity;
 import android.nfc.NdefMessage;

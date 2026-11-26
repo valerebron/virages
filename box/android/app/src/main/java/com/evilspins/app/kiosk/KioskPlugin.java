@@ -1,4 +1,4 @@
-package com.evilspins.app.kiosk;
+package com.box.app.kiosk;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -17,7 +17,7 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "AppKiosk")
 public class KioskPlugin extends Plugin {
     private static final String TAG = "KioskPlugin";
-    private static final String ACTION_EXIT_KIOSK = "com.evilspins.app.EXIT_KIOSK";
+    private static final String ACTION_EXIT_KIOSK = "com.box.app.EXIT_KIOSK";
 
     private BroadcastReceiver exitKioskReceiver;
 

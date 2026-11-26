@@ -70,7 +70,7 @@ npm run install
 
 # Launch app
 npm run launch
-# Or: adb shell am start -n com.evilspins.app/.MainActivity
+# Or: adb shell am start -n com.box.app/.MainActivity
 
 # Full rebuild cycle
 npm run rebuild  # uninstall → build → install → launch
@@ -107,7 +107,7 @@ virages/app/
 │   └── lib/                # Empty (Capacitor generated files at runtime)
 ├── android/
 │   ├── app/
-│   │   └── src/main/java/com/evilspins/app/
+│   │   └── src/main/java/com/box/app/
 │   │       ├── MainActivity.java              # Plugin registration
 │   │       ├── nfc/NfcPlugin.java             # NFC Reader Mode
 │   │       ├── sensor/LightSensorPlugin.java  # Light sensor
@@ -128,8 +128,8 @@ virages/app/
 `capacitor.config.json`:
 ```json
 {
-  "appId": "com.evilspins.app",
-  "appName": "evilspins-app",
+  "appId": "com.box.app",
+  "appName": "box-app",
   "webDir": "www",
   "plugins": {
     "AppPermissions": {},

@@ -1,4 +1,4 @@
-package com.evilspins.app.permissions;
+package com.box.app.permissions;
 
 import com.getcapacitor.JSArray;
 import com.getcapacitor.JSObject;

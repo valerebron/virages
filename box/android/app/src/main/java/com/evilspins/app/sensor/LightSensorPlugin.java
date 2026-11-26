@@ -1,4 +1,4 @@
-package com.evilspins.app.sensor;
+package com.box.app.sensor;
 
 import android.content.Context;
 import android.hardware.Sensor;

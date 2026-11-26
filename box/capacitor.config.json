@@ -1,6 +1,6 @@
 {
-  "appId": "com.evilspins.app",
-  "appName": "evilspins-app",
+  "appId": "com.box.app",
+  "appName": "box-app",
   "webDir": "www",
   "plugins": {
     "AppPermissions": {},

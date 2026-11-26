@@ -79,8 +79,8 @@ export function useFileStorage(logFn: (msg: string, type: 'file' | 'info' | 'war
       return
     }
 
-    const fileName = `evilspins_${Date.now()}.txt`
-    const content = `Created: ${new Date().toISOString()}\nFrom evilspins app`
+    const fileName = `box_${Date.now()}.txt`
+    const content = `Created: ${new Date().toISOString()}\nFrom box app`
     const options: WriteFileOptions = { fileName, content, directory: '' }
 
     logFn(`Creating file: ${fileName}`, 'file')
