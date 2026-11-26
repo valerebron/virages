@@ -5,7 +5,7 @@ import { viteSingleFile } from 'vite-plugin-singlefile'
 
 export default defineConfig(() => ({
   plugins: [vue(), viteSingleFile()],
-  base: '/',
+  base: process.env.BASE_URL || '/',
   resolve: {
     alias: {
       '@': path.resolve(import.meta.dirname, './src'),

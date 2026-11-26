@@ -1,12 +1,11 @@
-name: Deploy card to GitHub Pages
+name: Deploy card-tools demo to GitHub Pages
 
 on:
   push:
-    branches: ['main']
+    branches: [main]
     paths:
-      - "card/**"
-      - "pnpm-lock.yaml"
-      - ".github/workflows/deploy-card.yml"
+      - 'card/**'
+      - '.github/workflows/card-pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -15,7 +14,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages-card'
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -31,36 +30,33 @@ jobs:
           version: 9
           run_install: false
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
-
-      - name: Cache pnpm store
-        uses: actions/cache@v4
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version: 20
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+        working-directory: ./card
 
-      - name: Build
-        run: pnpm --filter card run build
+      - name: Build demo app
+        run: pnpm run build
+        working-directory: ./card
+        env:
+          BASE_URL: '/virages/card/'
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: card/dist
+          path: ./card/dist
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
