@@ -1,6 +1,6 @@
 <template>
-  <button class="play-pause-btn" :class="{ isPlaying }" :aria-label="isPlaying ? 'Pause' : 'Play'" tabindex="-1"
-    :style="buttonStyle">
+  <div class="play-pause-icon" :class="{ isPlaying }" :aria-label="isPlaying ? 'Pause' : 'Play'" tabindex="-1"
+    :style="iconStyle">
     <svg class="icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <!-- Pause bars -->
       <g class="pause-icon">
@@ -11,7 +11,7 @@
       <!-- Play triangle -->
       <path class="play-icon" d="M16 10.5 L16 37.5 L39 24 Z" />
     </svg>
-  </button>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -34,7 +34,7 @@ const props = withDefaults(defineProps<{
   color: 'currentColor'
 })
 
-const buttonStyle = computed(() => ({
+const iconStyle = computed(() => ({
   '--duration': `${props.duration}ms`,
   '--ease': props.ease,
   '--size': props.size,
@@ -45,7 +45,7 @@ const buttonStyle = computed(() => ({
 </script>
 
 <style scoped>
-.play-pause-btn {
+.play-pause-icon {
   --size: 100%;
   --color: currentColor;
   --duration: 220ms;
@@ -63,7 +63,7 @@ const buttonStyle = computed(() => ({
   color: var(--color);
 }
 
-.play-pause-btn:focus-visible {
+.play-pause-icon:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 4px;
   border-radius: 4px;

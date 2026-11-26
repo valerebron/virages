@@ -31,7 +31,7 @@ const props = withDefaults(defineProps<{
   isPlaying: false,
   color: '#fdec50', // esyellow
   bgColor: 'rgba(0, 0, 0, 0.5)',
-  size: 30
+  size: 31
 })
 
 const buttonStyle = computed(() => ({
@@ -50,8 +50,7 @@ const iconStyle = computed(() => ({
 
 <style scoped lang="scss">
 .play-button {
-  @apply text-esyellow bg-black/50 transition-all duration-100 ease-in-out transform active:scale-90 scale-110 text-4xl font-bold;
-  pointer-events: none;
+  @apply text-esyellow bg-black/50 text-4xl font-bold;
   border-radius: 100%;
   height: 30%;
   font-size: 420%;

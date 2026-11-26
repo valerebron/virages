@@ -146,6 +146,12 @@ const onCardEnter = (event: KeyboardEvent) => {
     }
   }
 
+  &.face-down:active {
+    .play-button {
+      @apply scale-90;
+    }
+  }
+
   &:focus:not(.is-disabled),
   &.current-card:not(.is-disabled) {
     @apply z-50 scale-110;
