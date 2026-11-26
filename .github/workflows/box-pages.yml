@@ -38,9 +38,12 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-        working-directory: ./box
 
-      - name: Build web app
+      - name: Build card-tools library
+        run: pnpm --filter card-tools build:lib
+        working-directory: ./
+
+      - name: Build box web app
         run: pnpm run build
         working-directory: ./box
         env:
