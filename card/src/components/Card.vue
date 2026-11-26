@@ -18,7 +18,6 @@ import Platine from './Platine.vue'
 import { useAutoplayGate } from '@/composables/useAutoplayGate'
 import { useScreenWakeLock } from '@/composables/useScreenWakeLock'
 import { onMounted, onBeforeUnmount, onUnmounted, ref, computed, watch } from 'vue'
-import { useTemplateRef } from 'vue'
 
 const props = withDefaults(defineProps<{
   card: CardData;
@@ -81,7 +80,7 @@ const isFaceUp = computed({
 })
 
 const isLoading = ref(false)
-const platineRef = useTemplateRef<InstanceType<typeof Platine>>('platineRef')
+const platineRef = ref<InstanceType<typeof Platine>>()
 const { canAutoplayNow, requestAutoplayUnlock } = useAutoplayGate()
 const { requestWakeLock, releaseWakeLock } = useScreenWakeLock()
 
