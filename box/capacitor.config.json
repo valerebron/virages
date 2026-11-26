@@ -1,0 +1,15 @@
+{
+  "appId": "com.evilspins.app",
+  "appName": "evilspins-app",
+  "webDir": "www",
+  "plugins": {
+    "AppPermissions": {},
+    "AppNfc": {},
+    "AppLightSensor": {},
+    "AppFileStorage": {}
+  },
+  "server": {
+    "url": "http://192.168.1.122:3000",
+    "cleartext": true
+  }
+}

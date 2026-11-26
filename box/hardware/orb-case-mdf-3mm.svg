@@ -1,0 +1,137 @@
+Return-Path: <contact@valere.dev>
+Received: from 10.2.3.8 (LHLO mta8.priv.ovhmail-u1.ea.mail.ovh.net)
+ (10.2.3.8) by mailstore91.priv.ovhmail-u1.ea.mail.ovh.net with LMTP; Wed,
+ 25 Nov 2026 16:46:13 +0000 (UTC)
+Received: from output60.mail.ovh.net (unknown [10.1.6.14])
+	by mta8.priv.ovhmail-u1.ea.mail.ovh.net (Postfix) with ESMTPS id 20C71DA21A6
+	for <contact@valere.dev>; Wed, 25 Nov 2026 16:46:13 +0000 (UTC)
+Received: from vr48.mail.ovh.net (unknown [10.101.8.48])
+	by out60.mail.ovh.net (Postfix) with ESMTP id 4jZQYJ6tvQzcb5j
+	for <contact@valere.dev>; Wed, 25 Nov 2026 16:46:12 +0000 (UTC)
+Received: from in58.mail.ovh.net (unknown [10.101.4.58])
+	by vr48.mail.ovh.net (Postfix) with ESMTP id 4jZQYJ6RSYz3C1Lw
+	for <contact@valere.dev>; Wed, 25 Nov 2026 16:46:12 +0000 (UTC)
+Received: from smtpout1.mo534.mail-out.ovh.net (smtpout1.mo534.mail-out.ovh.net [51.210.94.140])
+	by in58.mail.ovh.net (Postfix) with ESMTPS id 4jZQYJ4h9DzxNfr
+	for <contact@valere.dev>; Wed, 25 Nov 2026 16:46:12 +0000 (UTC)
+Authentication-Results: mx.mail.ovh.net;
+    arc=none (no signatures found);
+    dkim=pass (2048-bit rsa key sha256) header.d=valere.dev header.i=@valere.dev header.b=PjYZ05US header.a=rsa-sha256 header.s=ovhmo-selector-1;
+    dmarc=none policy.published-domain-policy=none policy.applied-disposition=none policy.evaluated-disposition=none (p=none,d=none,d.eval=none) policy.policy-from=p header.from=valere.dev;
+    spf=pass smtp.mailfrom=contact@valere.dev smtp.helo=smtpout1.mo534.mail-out.ovh.net;
+    x-tls=pass smtp.version=TLSv1.3 smtp.cipher=TLS_AES_256_GCM_SHA384 smtp.bits=256
+Received-SPF: pass
+    (valere.dev: Sender is authorized to use 'contact@valere.dev' in 'mfrom' identity (mechanism 'include:mx.ovh.com' matched))
+    receiver=in58.mail.ovh.net;
+    identity=mailfrom;
+    envelope-from="contact@valere.dev";
+    helo=smtpout1.mo534.mail-out.ovh.net;
+    client-ip=51.210.94.140
+Received: from director5.derp.mail-out.ovh.net (director5.derp.mail-out.ovh.net [79.137.60.225])
+	by mo534.mail-out.ovh.net (Postfix) with ESMTPS id 4jZQYJ1s4Sz6GdL
+	for <contact@valere.dev>; Wed, 25 Nov 2026 16:46:12 +0000 (UTC)
+Received: from director5.derp.mail-out.ovh.net (director5.derp.mail-out.ovh.net. [127.0.0.1])
+        by director5.derp.mail-out.ovh.net (inspect_sender_mail_agent) with SMTP
+        for <contact@valere.dev>; Wed, 25 Nov 2026 16:46:12 +0000 (UTC)
+Received: from mta7.priv.ovhmail-u1.ea.mail.ovh.net (unknown [10.110.43.232])
+	by director5.derp.mail-out.ovh.net (Postfix) with ESMTPS id 4jZQYJ0qgsz6Mcw
+	for <contact@valere.dev>; Wed, 25 Nov 2026 16:46:12 +0000 (UTC)
+Received: from mailstore91.priv.ovhmail-u1.ea.mail.ovh.net (unknown [10.1.8.91])
+	by mta7.priv.ovhmail-u1.ea.mail.ovh.net (Postfix) with ESMTP id EB449B8216A
+	for <contact@valere.dev>; Wed, 25 Nov 2026 16:46:11 +0000 (UTC)
+Date: Wed, 25 Nov 2026 16:46:11 +0000 (UTC)
+From: =?utf-8?Q?Val=C3=A8re?= <contact@valere.dev>
+To: =?utf-8?Q?Val=C3=A8re?= <contact@valere.dev>
+Message-ID: <670347777.79686032.1795625171822.JavaMail.zimbra@valere.dev>
+Subject: Box Orb Case
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_79686028_319636561.1795625171818"
+X-Originating-IP: [37.59.142.66]
+X-Authenticated-User: contact@valere.dev
+X-Zimbra-Message-Verification: hash=SHA256;guid=OGYxMDI2NjU1YTNiN2FiMDNhZGQ0ZTJiZjc0MWVkNmRhOTY3ZDRhMjJhNjhjZGY3NThhZDE3MmZhNzZhMDNjZg==
+Thread-Index: rIhq4ANV8pbmObdm3HJnbbRjxKYa8g==
+Thread-Topic: Box Orb Case
+x-ovh-tracer-id: 1212594202371778664
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 0
+X-VR-SPAMCAUSE: dmFkZTF6kEeYCGsIg7EE4jVGP58Ms9nJK+/DfY1pov7UkDsiaXkcrCc5rL6Q6m6kuppUGel/O+5hrHRNYxqjIAD0nyvHA65ii3TQ7ZzCkN96JWIH8HA0oHcMIYVtShp9XcZ59yIvJ8a8G8nEz3yKxesBizRtJr1y/BLgecnukWZrj+6zf2Qf6EstIzfu5x2wHz5kBtkGF2k3od0Jo5lyQ39L3SwzcNVAT01w7j+Fesru9xj/TS+vzA+Kv9PZi1D+9V99SN19x8O5EOfyQyX90yX6bayPHJ5h5ir6DI62Dvj6rhz4s0uqTDWmRV8nBcj/0IxT6u8ysilidBNU0nhuKNq0Ahe7QK6MXuQYo20i+SEJn1Fk3ESxdyiGq4cxopvIUUQePtLr1PcN4AKUSi9aX0xTn/2Zp0dmETwdA4W56rQXvmOfCTcuPmXRejqieGlqF9iRLut9Ii744cTvp3ily2SYo2hqyYF9SQTlNwb9h3Q/efVdXCK2CI4LyEaOuM/RPDposz2ue5Mx/nBE5um4KiLs4ZPwq6qDhOmhaqJ5B9OE+7S2CZuasQMTRSu32kny4DZvTN/3YOM0zPo/eU5p6ctI5JE9fkiBviNC2KlLJBG+TheUvwFVZT/9ox1wwWuKI8urHTfODevHjUzxqyFGE0x+loFOefqCzXhUK7hzCzzOit8FrQ
+DKIM-Signature: a=rsa-sha256; bh=mJ8zfZaH1Qe/xltPwGAwk5DAsbSlAA5rXhvI2IOTjRI=;
+ c=relaxed/relaxed; d=valere.dev; h=From; s=ovhmo-selector-1; t=1795625172;
+ v=1;
+ b=PjYZ05USfnpxprzLGJS+UH37oohFzRKsQwPDzzq3Rg0W6xcdIEW7QC9PL4a8K7jYWzEZpn1J
+ 7fxqZHmCO/0I/fU98ia0x4cGowDjUaYDsH2dmBj++XdllZbOvgkoppUNcHjvMQqdxEYwllGEU3/
+ EvgRCXhP83SpcxRkXNcms8nqo7G2cr9coeJ1STXxj7YjOAQzuT2W9wwP+SbidWOewsCPfrnbBfl
+ MuylqkICiImbUkgbavK2XSgnp+ZxUFR91hdx9DkXBpL1eeYbaI8Z/tJZMD+kQLrWuvNj175qqT3
+ 5fEGvCO4lIqS8Y9AqldEyV8FkyrMClgu1mVnFef+uzsBw==
+X-OVH-Remote: 51.210.94.140 (smtpout1.mo534.mail-out.ovh.net)
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 0
+X-VR-SPAMCAUSE: dmFkZTGWHzl5galpTJAGhpt7wucEUGPG/SI2m5zsvSSYSzoRpIzx/fM+SH9URiIp7hWKkeFbhlIjXSeJuoef3uR3/FV+0UWj/sV3t1EBdeVjmn8UwGkqEt3MvNSjFw7B74lvkds0MKhc+5HaPJ+Q2R+m/428TGoNqUHcmpmopWHsSrcwGcizaJagO+Y0UgMP4w4+pGJwiKb/FuimKZUVwMVQTBcT7MM+w+xlxuvt/HKVqUzPbqILFZExcXCMErvhAI7UplAbFFdmw0ymOqTI46Jea2rVVoG4Et1Tyvw4kmi7T+fq0wyDBA9R4I/EE1fXcyqIfj8CugFB1ztatw86GgwIJzCEAeIbwZWVGC1z0QurlK9rUHGKJOZ0/RiInRoNWN4QaYE9eM8UfOKj1kELu7xLvP5q0cw6TjJ/hrY8wE0vroD0RDp7V/8tWoaofRvymZdCjYaywZ+a3fqsmZ0qopWaaDsbMv1QbyiTrhQj9njm6po56KxfciFwhft6lTz6/B6ZPVu3DVZ3SSWAAWJceECmAQtB7a1oeqNkFgWvgsI5tx3mMS3N6TcvTTkJe6IWyqL/Zp2dlBQ2C9VQYvw7maDp1NJnxBz+Z1Sb/W3ekJDOnp/LssnUF8MeTDNx6yOw/bby9wnl0i8/VmRPSDS+37zNhl2tfaDBQ4TfgIgg4LvQUTfp+w
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: OK
+
+------=_Part_79686028_319636561.1795625171818
+Content-Type: multipart/alternative; 
+	boundary="=_84a6acbc-7b55-4f95-b6ef-8ea7817fafd5"
+
+--=_84a6acbc-7b55-4f95-b6ef-8ea7817fafd5
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+
+
+--=_84a6acbc-7b55-4f95-b6ef-8ea7817fafd5
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+<html><body><div><br></div><div data-marker="__SIG_PRE__" id="signature-content-no-signature"></div></body></html>
+--=_84a6acbc-7b55-4f95-b6ef-8ea7817fafd5--
+
+------=_Part_79686028_319636561.1795625171818
+Content-Type: image/svg+xml; name=__orb-case-mdf-3mm.svg
+Content-Disposition: attachment; filename=__orb-case-mdf-3mm.svg
+Content-Transfer-Encoding: base64
+
+PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjwh
+LS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoK
+PHN2ZwogICB3aWR0aD0iMTc1bW0iCiAgIGhlaWdodD0iOTcuMzg1NTUxbW0iCiAgIHZpZXdCb3g9
+IjAgMCAxNy4wODc1IDkuNTA5MDAzNiIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnMSIKICAg
+aW5rc2NhcGU6dmVyc2lvbj0iMS40LjIgKGY0MzI3ZjQsIDIwMjUtMDUtMTMpIgogICBzb2RpcG9k
+aTpkb2NuYW1lPSJfX29yYi1jYXNlLW1kZi0zbW0uc3ZnIgogICB4bWxuczppbmtzY2FwZT0iaHR0
+cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgeG1sbnM6c29kaXBv
+ZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgog
+ICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnN2Zz0iaHR0cDov
+L3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0ibmFt
+ZWR2aWV3MSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiMwMDAw
+MDAiCiAgICAgYm9yZGVyb3BhY2l0eT0iMC4yNSIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRv
+dz0iMiIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2Vj
+aGVja2VyYm9hcmQ9IjAiCiAgICAgaW5rc2NhcGU6ZGVza2NvbG9yPSIjZDFkMWQxIgogICAgIGlu
+a3NjYXBlOmRvY3VtZW50LXVuaXRzPSJtbSIKICAgICBpbmtzY2FwZTp6b29tPSIxLjQxNDIxMzYi
+CiAgICAgaW5rc2NhcGU6Y3g9Ii0yNy4yMjM2MTEiCiAgICAgaW5rc2NhcGU6Y3k9IjEyOC4zMzk4
+OCIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjE5MjAiCiAgICAgaW5rc2NhcGU6d2luZG93
+LWhlaWdodD0iMTAwOSIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iLTgiCiAgICAgaW5rc2NhcGU6
+d2luZG93LXk9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiCiAgICAgaW5r
+c2NhcGU6Y3VycmVudC1sYXllcj0ibGF5ZXIxIgogICAgIHNob3dndWlkZXM9InRydWUiIC8+CiAg
+PGRlZnMKICAgICBpZD0iZGVmczEiIC8+CiAgPGcKICAgICBpbmtzY2FwZTpsYWJlbD0iTGF5ZXIg
+MSIKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjEiCiAgICAg
+dHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEuNTM2MTk2LC05LjQwNTMxNDkpIj4KICAgIDxyZWN0CiAg
+ICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojZmYwMDAwO3N0cm9rZS13aWR0aDowLjAwOTYx
+MDE3O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgaWQ9InJl
+Y3QxIgogICAgICAgd2lkdGg9IjE3LjA3Nzg5IgogICAgICAgaGVpZ2h0PSI5LjQ5OTM5MzUiCiAg
+ICAgICB4PSIxLjU0MTAwMTEiCiAgICAgICB5PSI5LjQxMDEyIiAvPgogICAgPGNpcmNsZQogICAg
+ICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6I2ZmMDAwMDtzdHJva2Utd2lkdGg6MC4wMDk3NjQy
+OTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgIGlkPSJwYXRo
+MSIKICAgICAgIGN4PSIxMC4wNzk5NDciCiAgICAgICBjeT0iMTQuMTk1MTk3IgogICAgICAgcj0i
+My45MDU3MTQzIiAvPgogICAgPHJlY3QKICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiNm
+ZjAwMDA7c3Ryb2tlLXdpZHRoOjAuMDE2MDY4NztzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tl
+LW9wYWNpdHk6MSIKICAgICAgIGlkPSJyZWN0Mi0zLTMiCiAgICAgICB3aWR0aD0iMTQuNzU4NDA4
+IgogICAgICAgaGVpZ2h0PSIwLjA4NjAxMjUzNSIKICAgICAgIHg9IjIuNzAwNzQyNSIKICAgICAg
+IHk9IjkuODA2ODMzMyIgLz4KICAgIDxyZWN0CiAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9r
+ZTojZmYwMDAwO3N0cm9rZS13aWR0aDowLjAwOTc2NDI5O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtz
+dHJva2Utb3BhY2l0eToxIgogICAgICAgaWQ9InJlY3QyLTgiCiAgICAgICB3aWR0aD0iMC40Nzg0
+NDk5NyIKICAgICAgIGhlaWdodD0iMC40Nzg0NSIKICAgICAgIHg9IjMuNDkzODU4MSIKICAgICAg
+IHk9IjE0LjMyNTEwNCIKICAgICAgIHJ4PSIyOS41OTg1NzciCiAgICAgICByeT0iOS40Mzg5MTM5
+ZS0wNyIgLz4KICA8L2c+Cjwvc3ZnPgo=
+------=_Part_79686028_319636561.1795625171818--

@@ -1,0 +1,58 @@
+{
+  "name": "card-tools",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Vue 3 component library for interactive audio cards with vinyl-style playback",
+  "author": "prozety",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue3",
+    "component-library",
+    "audio",
+    "music-player"
+  ],
+  "main": "./dist/card-tools.umd.js",
+  "module": "./dist/card-tools.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/card-tools.es.js",
+      "require": "./dist/card-tools.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "build:lib": "vite build -c vite.lib.config.ts && vue-tsc -p tsconfig.lib.json",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0 || ^3.5.0"
+  },
+  "dependencies": {
+    "blurhash": "^2.0.5",
+    "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/tsconfig": "^0.9.1",
+    "autoprefixer": "^10.6.2",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.32",
+    "sass-embedded": "^1.108.2",
+    "tailwindcss": "3.4.19",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.6",
+    "vite-plugin-singlefile": "^2.3.4",
+    "vue-tsc": "^3.3.14"
+  },
+  "sideEffects": false
+}

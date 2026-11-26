@@ -1,0 +1,33 @@
+{
+  "name": "evilspins-app",
+  "version": "1.0.0",
+  "description": "App NFC Debug - Vue 3 PWA",
+  "type": "module",
+  "scripts": {
+    "devite": "vite",
+    "dev": "./scripts/dev-android.sh",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "build:android": "npm run build && cd android && ./gradlew assembleDebug",
+    "install-apk": "adb install -r android/app/build/outputs/apk/debug/app-debug.apk",
+    "launch": "adb shell am start -n com.evilspins.app/.MainActivity",
+    "logs": "adb logcat | grep -iE \"evilspins|capacitor|AppPermissions\"",
+    "uninstall": "adb uninstall com.evilspins.app 2>/dev/null || true",
+    "rebuild": "npm run uninstall && npm run build:android && npm run install-apk && npm run launch",
+    "scrcpy": "scrcpy"
+  },
+  "dependencies": {
+    "card-tools": "workspace:*",
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/cli": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0",
+    "vite-plugin-pwa": "^0.19.0",
+    "vue-tsc": "^2.0.0"
+  }
+}

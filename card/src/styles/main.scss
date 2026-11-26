@@ -1,0 +1,79 @@
+// card-tools styles
+// This file is imported by the library entry point to include all component styles
+
+// Tailwind imports (components will use @apply)
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// CSS Custom Properties for theming
+:root {
+  --es-yellow: #f5d742;
+  --es-yellow-dark: #e4c038;
+  --es-yellow-light: #f9e88a;
+}
+
+// Base reset for components
+* {
+  box-sizing: border-box;
+}
+
+// Focus visible styles for accessibility
+:focus-visible {
+  outline: 2px solid var(--es-yellow);
+  outline-offset: 2px;
+}
+
+// Selection styles
+::selection {
+  background-color: var(--es-yellow);
+  color: #1a1a1a;
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Utility classes used by components
+.es-yellow {
+  color: var(--es-yellow);
+}
+
+.bg-es-yellow {
+  background-color: var(--es-yellow);
+}
+
+.text-es-yellow {
+  color: var(--es-yellow);
+}
+
+.border-es-yellow {
+  border-color: var(--es-yellow);
+}
+
+// Scrollbar styling for webkit
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--es-yellow);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--es-yellow-dark);
+}

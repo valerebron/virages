@@ -1,0 +1,10 @@
+packages:
+  - "box"
+  - "card"
+  - "telephone"
+  - "terminal"
+  - "tokywoky"
+  
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
