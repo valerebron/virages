@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted } from 'vue'
 import { Capacitor } from '@capacitor/core'
 import StatusPanel from '@/components/StatusPanel.vue'
 import ActionPanel from '@/components/ActionPanel.vue'
@@ -7,7 +7,6 @@ import LogPanel from '@/components/LogPanel.vue'
 import { useNfc } from '@/composables/useNfc'
 import { useLightSensor } from '@/composables/useLightSensor'
 import { useFileStorage } from '@/composables/useFileStorage'
-import { useKiosk } from '@/composables/useKiosk'
 
 interface LogEntry {
   id: number
@@ -35,15 +34,9 @@ const clearLogs = () => {
 const nfc = useNfc(addLog)
 const lux = useLightSensor(addLog)
 const files = useFileStorage(addLog)
-const kiosk = useKiosk()
 
 const createFile = () => files.createFile()
 const deleteFile = () => files.deleteFile()
-const exitKiosk = async () => {
-  await kiosk.exitLockTask()
-}
-
-const inLockTask = computed(() => kiosk.state.value.inLockTask)
 
 onMounted(() => {
   clearLogs()
@@ -52,9 +45,6 @@ onMounted(() => {
   if (!Capacitor.isNativePlatform()) {
     addLog('Running in browser - Capacitor plugins not available', 'warning')
   }
-
-  // Setup kiosk exit receiver
-  kiosk.setupExitReceiver()
 })
 </script>
 
@@ -64,8 +54,6 @@ onMounted(() => {
     <ActionPanel
       :onCreate="createFile"
       :onDelete="deleteFile"
-      :onExitKiosk="exitKiosk"
-      :inLockTask="inLockTask"
     />
     <LogPanel :logs="logs" :onClear="clearLogs" />
   </div>

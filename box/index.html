@@ -12,18 +12,5 @@
 <body>
   <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
-  <script>
-    // Auto-setup kiosk exit receiver when Capacitor is ready
-    document.addEventListener('DOMContentLoaded', () => {
-      const checkCapacitor = setInterval(() => {
-        if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.AppKiosk) {
-          clearInterval(checkCapacitor);
-          window.Capacitor.Plugins.AppKiosk.setupExitReceiver()
-            .then(() => console.log('Kiosk exit receiver registered'))
-            .catch(e => console.error('Failed to register kiosk exit receiver:', e));
-        }
-      }, 100);
-    });
-  </script>
 </body>
 </html>

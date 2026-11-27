@@ -6,7 +6,6 @@ declare module '@capacitor/core' {
     AppLightSensor: AppLightSensorPlugin
     AppFileStorage: AppFileStoragePlugin
     AppPermissions: AppPermissionsPlugin
-    AppKiosk: AppKioskPlugin
   }
 }
 
@@ -112,10 +111,4 @@ export interface AppPermissionsPlugin {
   requestPermission(options: { permission: string }): Promise<{ granted: boolean }>
   checkPermissions(options: { permissions: string[] }): Promise<{ permissions: { name: string; granted: boolean }[] }>
   requestPermissions(options: { permissions: string[] }): Promise<{ permissions: { name: string; granted: boolean }[] }>
-}
-
-export interface AppKioskPlugin {
-  exitLockTask(): Promise<{ success: boolean }>
-  isInLockTask(): Promise<{ inLockTask: boolean }>
-  setupExitReceiver(): Promise<void>
 }

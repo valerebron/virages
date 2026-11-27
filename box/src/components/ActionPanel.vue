@@ -2,8 +2,6 @@
 interface Props {
   onCreate: () => void
   onDelete: () => void
-  onExitKiosk?: () => void
-  inLockTask?: boolean
   disabled?: boolean
 }
 
@@ -17,14 +15,6 @@ const props = defineProps<Props>()
     </button>
     <button class="action-btn delete" @click="props.onDelete" :disabled="props.disabled">
       Delete File
-    </button>
-    <button
-      v-if="props.inLockTask && props.onExitKiosk"
-      class="action-btn kiosk"
-      @click="props.onExitKiosk"
-      :disabled="props.disabled"
-    >
-      Exit Kiosk
     </button>
   </div>
 </template>
@@ -58,6 +48,4 @@ const props = defineProps<Props>()
 .action-btn.create:hover:not(:disabled) { background: #1a3a2a; }
 .action-btn.delete { border-color: #f85149; }
 .action-btn.delete:hover:not(:disabled) { background: #3a1a1a; }
-.action-btn.kiosk { border-color: #ffa657; }
-.action-btn.kiosk:hover:not(:disabled) { background: #3a2a1a; }
 </style>
