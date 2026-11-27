@@ -90,6 +90,7 @@ export default defineConfig({
   build: {
     outDir: 'www',
     emptyOutDir: true,
-    sourcemap: true
+    sourcemap: true,
+    target: 'es2022'
   }
 })
