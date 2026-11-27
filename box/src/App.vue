@@ -7,18 +7,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { Card, CardData } from 'card-tools'
+import { Card, CardData, CardUnicode } from 'card-tools'
 
 const route = useRoute()
 const id = route.params.id ?? 'default'
-
-const props = defineProps<{ id?: string }>()
 
 const mp3Url = new URL(`../../card/src/assets/${id}.mp3`, import.meta.url).href
 const svgUrl = new URL(`../../card/src/assets/${id}.svg`, import.meta.url).href
 const jpgUrl = new URL(`../../card/src/assets/${id}.jpg`, import.meta.url).href
 
-let unicode;
+let unicode: CardUnicode | undefined;
 switch (true) {
   case id.includes('abel'):
     unicode = '🂽';
