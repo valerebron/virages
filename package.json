@@ -27,5 +27,8 @@
     "tokywoky:upload": "pnpm --filter tokywoky upload",
     "tokywoky:monitor": "pnpm --filter tokywoky monitor",
     "tokywoky:send": "pnpm --filter tokywoky send"
+  },
+  "dependencies": {
+    "vue-router": "^4.6.5"
   }
 }

@@ -6,18 +6,40 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 import { Card, CardData } from 'card-tools'
-import DefaultCardMp3 from '../../card/src/assets/default.mp3?url'
-import DefaultCardSvg from '../../card/src/assets/default.svg?url'
+
+const route = useRoute()
+const id = route.params.id ?? 'default'
+
+const props = defineProps<{ id?: string }>()
+
+const mp3Url = new URL(`../../card/src/assets/${id}.mp3`, import.meta.url).href
+const svgUrl = new URL(`../../card/src/assets/${id}.svg`, import.meta.url).href
+const jpgUrl = new URL(`../../card/src/assets/${id}.jpg`, import.meta.url).href
+
+let unicode;
+switch (true) {
+  case id.includes('abel'):
+    unicode = '🂽';
+    break;
+  case id.includes('amber'):
+    unicode = '🃕';
+    break;
+  case id.includes('strokes'):
+    unicode = '🃁';
+    break;
+}
 
 const card = ref<CardData>({
-  fileUrl: DefaultCardMp3,
-  coverUrl: DefaultCardSvg,
+  fileUrl: mp3Url,
+  coverUrl: (id === 'default') ? svgUrl : jpgUrl,
   color: '#6b7280',
-  artist: 'Test Artist',
-  title: 'Test Title',
-  unicode: '🂠',
+  artist: 'Artist',
+  title: 'Title',
+  unicode: unicode,
 })
+
 </script>
 
 <style>
